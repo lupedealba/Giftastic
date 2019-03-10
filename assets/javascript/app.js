@@ -55,56 +55,32 @@ function displayGifs() {
   });
 });
 }
-// Function for displaying movie data
+
 function renderButtons() {
-
-  // Delete buttons prior to adding new movies
   $('#animalsGroup').empty();
-
-  // Looping through the array of movies
   for (var i = 0; i < topics.length; i++) {
-
-      // Dynamically generate buttons for each movie in array
       var button = $('<button>');
-
-      // Adding a class of movies to buttons
       button.addClass('animals');
-
-      // Adding a data-attribute
       button.attr('data-animals', topics[i]);
-
-      // Providing the initial button text
       button.text(topics[i]);
-
-      // Adding the button to the moviesGroup div
       $('#animalsGroup').append(button);
   }
 }
 
-// Function for when events button is clicked
 $(' #addAnimalsButton').on("click", function (event) {
   event.preventDefault();
 
-  // Alert textbox cannot be blank
   if ($('#newAnimalsInput').val().trim().toLowerCase() == '') {
       window.alert('Please enter an animal name. Textbox cannot be left blank.');
   } else {
 
-      // Grabs input from textbox
       var animals = $('#newAnimalsInput').val().trim();
-
-      // Add item to topics array
       topics.push(animals);
-
-      // Call renderButtons to handle processing of topics array
       renderButtons();
   }
 });
 
-// On click movies button and run displayGifs function 
 $(document).on("click", ".animals", displayGifs);
-
-// Display all buttons on load
 renderButtons();
 
   
