@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Giftastic</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css"></style>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!--Existing Movie Buttons Array-->
+      
+
+      <div class="col-md-7">
+          <h3><strong>Giftastic Animals:</strong></h3>
+          <div id="animalsGroup"></div>
+      </div>
+      <!--User Form and Submit Button-->
+      <div class="col-md-4">
+        <form>
+          <div class="form-group">
+            <label for="formGroupExampleInput"><p class="h3">Add Another Animal:</p></label>
+            <input id="newAnimalsInput" type="text" class="form-control" placeholder="i.e. cheetah" style="margin-bottom: 5px;">
+            <button id="addAnimalsButton" class="btn btn-primary mb-2" type="submit">Submit</button>
+          </div>
+          </form>
+      </div>
+
+      <!--Populate New GIFs-->
+      <div class="col-md-12">
+          <div id="gifContainer"></div>
+      </div>
+    </div>
+  </div>
+<!--</body> <br>
+<div style="position: relative;">
+    <div id="gifs-appear-here" style="float: left;">
+    </div>
+</div>-->
+  
+  
+</body>
+</html>
